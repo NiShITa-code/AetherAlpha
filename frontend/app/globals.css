@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --primary: #6366f1;
+  /* Indigo 500 */
+  --primary-foreground: #fafafa;
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+  --destructive: #ef4444;
+  --success: #22c55e;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-zinc-900/50 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl;
+  }
+
+  .glass-panel {
+    @apply bg-zinc-900/80 backdrop-blur-md border-r border-white/5;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-zinc-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full;
+}
